@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 from google.adk.tools import google_search
+from datetime import datetime
 
 def get_current_time() -> dict:
     """
@@ -15,6 +16,7 @@ root_agent = Agent(
     description="Tool agent",
     instruction="""
     You are a helpful assistant that can use the following tools:
+    
     - google_search
     """,
     tools=[google_search],
